@@ -120,7 +120,7 @@ wp config create \
 --dbuser=wordpress_user \
 
 
---dbpass=***REMOVED*** \
+--dbpass=wordpress_password \
 --dbhost=localhost \
 --path=/var/www/html \
 --allow-root
@@ -132,11 +132,11 @@ En este paso le estamos indicando los siguientes parámetros:
 - --dbuser: Usuario de la base de datos. En el ejemplo anterior se utiliza
     wordpress_user.
 - --dbpass: Contraseña del usuario de la base de datos. En el ejemlo anterior se
-    utiliza ***REMOVED***.
+    utiliza wordpress_password.
 - --dbhost: Host de la base de datos. En el ejemplo anterior se utiliza localhost.
 
 Tenga en cuenta que en su caso tendrá que reemplazar los valores: wordpress_db,
-wordpress_user y ***REMOVED***, por los valores que quiera utilizar para su base
+wordpress_user y wordpress_password, por los valores que quiera utilizar para su base
 de datos, usuario y contraseña.
 
 Al crear el archivo de configuración se crearán automáticamente los valores aleatorios
@@ -162,7 +162,7 @@ El comando anterior nos devolverá la siguiente salida:
 | table_prefix | wp_ | variable |
 | DB_NAME | wordpress_demo | constant |
 | DB_USER | wordpress_user | constant |
-| DB_PASSWORD | ***REMOVED*** | constant |
+| DB_PASSWORD | wordpress_password | constant |
 
 
 | DB_HOST | localhost | constant |
@@ -438,7 +438,7 @@ del repositorio:
 ├── htaccess
 │ └── .htaccess
 └── scripts
-├── .env
+├── .env.example   (cópialo a .env y rellénalo; .env no se versiona)
 ├── install_lamp.sh
 ├── setup_letsencrypt_https.sh
 └── deploy_wordpress_with_wpcli.sh
